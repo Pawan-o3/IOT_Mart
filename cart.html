@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <script defer src="cart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">IoT Mart</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="index.html">Product</a>
+                <ul class="dropdown-menu">
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="custom-projects.html">Projects</a></li>
+                </ul>
+            </li>
+            <li><a href="customization.html">Custom Projects</a></li>
+            <li><a href="solution.html">Solutions</a></li>
+            <li><a href="support.html">Support</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Shopping Cart</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Cart items will be inserted here dynamically -->
+            </tbody>
+        </table>
+        <h2>Total: ₹<span id="cart-total">0</span></h2>
+        <button onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 IoT Mart. All rights reserved.</p>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Customization</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* General Styles */
+        /* Navbar Styling */
+        .navbar {
+            background-color: white;
+            border-bottom: 2px solid white;
+            /* Red bottom border */
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Logo */
+        .navbar .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Navigation Menu */
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: d;
+            /* Hover effect */
+        }
+
+        /* Main Container */
+        .support-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Form Section */
+        .support-content h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .support-content p {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            margin-top: 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #0056b3;
+        }
+
+        /* Confirmation Message */
+        .hidden {
+            display: none;
+        }
+
+        #confirmation-message {
+            text-align: center;
+            font-size: 16px;
+            color: green;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">IoT Mart</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="customization.html">Customization</a></li>
+            <li><a href="solution.html">Solutions</a></li>
+            <li><a href="support.html">Support</a></li>
+        </ul>
+    </nav>
+
+
+    <main class="support-container">
+        <section class="support-content">
+            <h2>Customize Your Project</h2>
+            <p>Fill out the form below to customize your project requirements. Our team will review your request and get
+                back to you shortly.</p>
+        </section>
+
+        <section class="support-form-container">
+            <form id="customization-form">
+                <label for="project-name">Project Name:</label>
+                <input type="text" id="project-name" name="project-name" placeholder="Enter project name" required>
+
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="app-development">App Development</option>
+                    <option value="IoT-based">IoT</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="budget">Budget (INR):</label>
+                <input type="number" id="budget" name="budget" min="0" placeholder="Enter your budget" required>
+
+                <label for="deadline">Deadline:</label>
+                <input type="date" id="deadline" name="deadline" required>
+
+                <label for="description">Project Description:</label>
+                <textarea id="description" name="description" rows="5" placeholder="Describe your project in detail"
+                    required></textarea>
+
+                <label for="file">Upload File (optional):</label>
+                <input type="file" id="file" name="file">
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+
+            <p id="confirmation-message" class="hidden">Your project details have been submitted successfully!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 IOT Mart. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("customization-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const projectName = document.getElementById("project-name").value.trim();
+            const category = document.getElementById("category").value;
+            const budget = document.getElementById("budget").value.trim();
+            const deadline = document.getElementById("deadline").value;
+            const description = document.getElementById("description").value.trim();
+            const confirmationMessage = document.getElementById("confirmation-message");
+
+            if (!projectName || !category || !budget || !deadline || !description) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            alert("Your project details have been submitted successfully!");
+            confirmationMessage.classList.remove("hidden");
+            this.reset();
+
+            setTimeout(() => {
+                confirmationMessage.classList.add("hidden");
+            }, 3000);
+        });
+    </script>
+
+</body>
+
+</html>

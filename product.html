@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Mart Nav</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">IoT Mart</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="product.html">Product</a>
+                <ul class="dropdown-menu">
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </li>
+
+            <li><a href="customization.html">Customization</a></li>
+            <li><a href="solution.html">Solutions</a></li>
+            <li><a href="support.html">Support</a></li>
+        </ul>
+
+        <div class="icons">
+            <i class="fas fa-search" id="search-icon"></i>
+            <input type="text" id="search-box" placeholder="Search products..." style="display: none;">
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart" id="cart-icon" data-count="0"></i>
+            </a>
+            <i class="fas fa-user"></i>
+        </div>
+
+        </div>
+    </nav>
+    <div class="container">
+        <h1>IoT Store</h1>
+        <div class="product-grid">
+
+            <!-- Product 1 -->
+            <div class="product">
+                <div class="product-image">
+                    <img src="C:\Users\hp\Desktop\iotmart\img\ardiuno.jpg" alt="">
+                </div>
+                <h3>Ardiuno</h3>
+                <p class="price">729.99</p>
+                <p class="stock">10 In Stock</p>
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                <button class="view-btn"><i class="fas fa-shopping-cart"></i>View</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <div class="product-image">
+                    <img src="C:\Users\hp\Desktop\iotmart\img\raspberry.jpg" alt="">
+                </div>
+                <h3>Raspberry Pi</h3>
+                <p class="price">4000</p>
+                <p class="stock">5 In Stock</p>
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                <button class="view-btn"><i class="fas fa-shopping-cart"></i>View</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product">
+                <div class="product-image">
+                    <img src="C:\Users\hp\Desktop\iotmart\img\Sim Module.jpg" alt="">
+                </div>
+                <h3>Sim Module</h3>
+                <p class="price">1099</p>
+                <p class="stock">8 In Stock</p>
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                <button class="view-btn"><i class="fas fa-shopping-cart"></i>View</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product">
+                <div class="product-image">
+                    <img src="C:\Users\hp\Desktop\iotmart\img\LED Bulb.jpg" alt="">
+                </div>
+                <h3>LED Bulb</h3>
+                <p class="price">179.99</p>
+                <p class="stock">12 In Stock</p>
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                <button class="view-btn"><i class="fas fa-shopping-cart"></i>View</button>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product">
+                <div class="product-image">
+                    <img src="C:\Users\hp\Desktop\iotmart\img\pulse.jpg" alt="">
+                </div>
+                <h3>Pulse sensor</h3>
+                <p class="price">49.99</p>
+                <p class="stock">15 In Stock</p>
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                <button class="view-btn"><i class="fas fa-shopping-cart"></i>View</button>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product">
+                <div class="product-image">
+                    <img src="C:\Users\hp\Desktop\iotmart\img\Lcd.jpg" alt="">
+                </div>
+                <h3>LCD Screen</h3>
+                <p class="price">149.99</p>
+                <p class="stock">6 In Stock</p>
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                <button class="view-btn"><i class="fas fa-shopping-cart"></i>View</button>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product">
+                <div class="product-image">
+                    <img src="C:\Users\hp\Desktop\iotmart\img\jumper_wires.jpg" alt="">
+                </div>
+                <h3>Jumper Wires</h3>
+                <p class="price">99.99</p>
+                <p class="stock">9 In Stock</p>
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                <button class="view-btn"><i class="fas fa-shopping-cart"></i>View</button>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product">
+                <div class="product-image">
+                    <img src="C:\Users\hp\Desktop\iotmart\img\bluetooth.jpg" alt="">
+                </div>
+                <h3>Bluetooth model</h3>
+                <p class="price">499</p>
+                <p class="stock"></p>
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                <button class="view-btn"><i class="fas fa-shopping-cart"></i>View</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Leading provider of custom iot projects and components.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="#">Custom Projects</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> support@iotmart.com</p>
+                <p><i class="fas fa-phone"></i> 1-800-IOT Mart</p>
+                <p><i class="fas fa-map-marker-alt"></i> Matani, Hamirpur</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 IoT Mart. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

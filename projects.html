@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Mart - Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">IoT Mart</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li class="dropdown">
+                <a href="product.html">Product</a>
+                <ul class="dropdown-menu">
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </li>
+            <li><a href="customization.html">Customization</a></li>
+            <li><a href="solution.html">Solutions</a></li>
+            <li><a href="support.html">Support</a></li>
+        </ul>
+        <div class="icons">
+            <i class="fas fa-search" id="search-icon"></i>
+            <input type="text" id="search-box" placeholder="Search projects..." style="display: none;">
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart" id="cart-icon" data-count="0"></i>
+            </a>
+            <i class="fas fa-user"></i>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h1>IoT Projects</h1>
+        <div class="project-grid">
+            
+            <!-- Project 1 -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="img/smart_home.jpg" alt="Smart Home Automation">
+                </div>
+                <h3>Smart Home Automation</h3>
+                <p>Control home appliances remotely with IoT-based automation.</p>
+                <button class="view-btn"><i class="fas fa-eye"></i> View Project</button>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="img/weather_station.jpg" alt="IoT Weather Station">
+                </div>
+                <h3>IoT Weather Station</h3>
+                <p>Monitor real-time weather conditions using sensors.</p>
+                <button class="view-btn"><i class="fas fa-eye"></i> View Project</button>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="img/health_monitor.jpg" alt="Health Monitoring System">
+                </div>
+                <h3>Health Monitoring System</h3>
+                <p>Track heart rate, temperature, and health vitals remotely.</p>
+                <button class="view-btn"><i class="fas fa-eye"></i> View Project</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Leading provider of custom IoT projects and components.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="customization.html">Custom Projects</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> support@iotmart.com</p>
+                <p><i class="fas fa-phone"></i> 1-800-IOT Mart</p>
+                <p><i class="fas fa-map-marker-alt"></i> Matani, Hamirpur</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 IoT Mart. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

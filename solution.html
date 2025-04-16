@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            background-color: white;
+            border-bottom: 2px solid red;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: red;
+        }
+
+        /* Main Content */
+        .solution-container {
+            width: 80%;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+        }
+
+        select,
+        pre {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        pre {
+            background: #f4f4f4;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            padding: 15px;
+            border-left: 5px solid #007bff;
+        }
+
+        .download-btn {
+            display: block;
+            width: 100%;
+            background: #007bff;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin-top: 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">IoT Mart</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="customization.html">Customization</a></li>
+            <li><a href="solution.html">Solutions</a></li>
+            <li><a href="support.html">Support</a></li>
+        </ul>
+    </nav>
+
+    <main class="solution-container">
+        <h2>Project Solutions</h2>
+        <label for="project-select">Select a Project:</label>
+        <select id="project-select">
+            <option value="" disabled selected>Choose a project</option>
+            <option value="web-development">Web Development Project</option>
+            <option value="app-development">App Development Project</option>
+            <option value="iot-project">IoT-based Project</option>
+        </select>
+
+        <label for="solution-code">Solution Code:</label>
+        <pre id="solution-code">Select a project to view its solution...</pre>
+
+        <a href="#" id="download-link" class="download-btn" download>Download Solution</a>
+    </main>
+
+    <script>
+        const projectSelect = document.getElementById("project-select");
+        const solutionCode = document.getElementById("solution-code");
+
+        projectSelect.addEventListener("change", function () {
+            const selectedProject = projectSelect.value;
+
+            fetch(`http://localhost:3000/solution/${selectedProject}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.solution) {
+                        solutionCode.textContent = data.solution;
+                    } else {
+                        solutionCode.textContent = "Solution not found.";
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching solution:", error);
+                    solutionCode.textContent = "Error fetching solution.";
+                });
+        });
+
+    </script>
+
+</body>
+
+</html>
